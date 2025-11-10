@@ -18,6 +18,105 @@ document.addEventListener('DOMContentLoaded', function() {
     let currentLanguage = localStorage.getItem('language') || 'en';
     let currentTheme = localStorage.getItem('theme') || 'light';
 
+    // Carousel functionality
+    let currentSlide = 0;
+    const totalSlides = 6;
+    const carouselTrack = document.querySelector('.carousel-track');
+    const indicators = document.querySelectorAll('.indicator');
+    let autoplayInterval;
+
+    function updateCarousel() {
+        if (carouselTrack) {
+            carouselTrack.style.transform = `translateX(-${currentSlide * 16.666}%)`;
+        }
+
+        // Update indicators
+        indicators.forEach((indicator, index) => {
+            indicator.classList.toggle('active', index === currentSlide);
+        });
+    }
+
+    function nextSlide() {
+        currentSlide = (currentSlide + 1) % totalSlides;
+        updateCarousel();
+    }
+
+    function prevSlide() {
+        currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
+        updateCarousel();
+    }
+
+    function goToSlide(slideIndex) {
+        currentSlide = slideIndex;
+        updateCarousel();
+    }
+
+    // Carousel event listeners
+    const prevBtn = document.getElementById('prev-btn');
+    const nextBtn = document.getElementById('next-btn');
+
+    if (prevBtn) {
+        prevBtn.addEventListener('click', prevSlide);
+    }
+
+    if (nextBtn) {
+        nextBtn.addEventListener('click', nextSlide);
+    }
+
+    // Indicator click handlers
+    indicators.forEach((indicator, index) => {
+        indicator.addEventListener('click', () => goToSlide(index));
+    });
+
+    // Carousel slide click to navigate to product
+    document.addEventListener('click', function(e) {
+        if (e.target.closest('.carousel-slide')) {
+            const slide = e.target.closest('.carousel-slide');
+            const productName = slide.dataset.product;
+
+            // Find the product section and scroll to it
+            const productSections = document.querySelectorAll('.product-section');
+            const targetSection = Array.from(productSections).find(section => {
+                const products = section.querySelectorAll('.product h3');
+                return Array.from(products).some(product => product.textContent.includes(productName));
+            });
+
+            if (targetSection) {
+                targetSection.scrollIntoView({ behavior: 'smooth' });
+
+                // Highlight the specific product
+                const products = targetSection.querySelectorAll('.product');
+                const targetProduct = Array.from(products).find(product => {
+                    const title = product.querySelector('h3').textContent;
+                    return title.includes(productName);
+                });
+
+                if (targetProduct) {
+                    targetProduct.style.animation = 'highlight 2s ease';
+                    setTimeout(() => {
+                        targetProduct.style.animation = '';
+                    }, 2000);
+                }
+            }
+        }
+    });
+
+    // Autoplay functionality
+    function startAutoplay() {
+        autoplayInterval = setInterval(nextSlide, 4000); // Change slide every 4 seconds
+    }
+
+    function stopAutoplay() {
+        clearInterval(autoplayInterval);
+    }
+
+    // Pause autoplay on hover
+    const carouselContainer = document.querySelector('.carousel-container');
+    if (carouselContainer) {
+        carouselContainer.addEventListener('mouseenter', stopAutoplay);
+        carouselContainer.addEventListener('mouseleave', startAutoplay);
+    }
+
     // Update cart count display
     function updateCartCount() {
         cartCount.textContent = cart.length;
@@ -421,4 +520,7 @@ document.addEventListener('DOMContentLoaded', function() {
     updateCartCount();
     switchLanguage(currentLanguage);
     switchTheme(currentTheme);
+
+    // Start carousel autoplay
+    startAutoplay();
 });
