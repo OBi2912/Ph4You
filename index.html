@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-en="Cell Phones & Accessories" data-es="Teléfonos Celulares y Accesorios">Cell Phones & Accessories</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="header-left">
+            <div class="logo">
+                <h1><a href="index.html">Ph4You</a></h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#new-phones" class="nav-link" data-category="new" data-en="New Phones" data-es="Teléfonos Nuevos">New Phones</a></li>
+                    <li><a href="#used-phones" class="nav-link" data-category="used" data-en="Used Phones" data-es="Teléfonos Usados">Used Phones</a></li>
+                    <li><a href="#accessories" class="nav-link" data-category="accessories" data-en="Accessories" data-es="Accesorios">Accessories</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="header-right">
+            <div class="header-controls">
+                <input type="text" id="search-input" data-en="Search products..." data-es="Buscar productos..." placeholder="Search products...">
+                <select id="sort-select">
+                    <option value="default" data-en="Sort by" data-es="Ordenar por">Sort by</option>
+                    <option value="price-low" data-en="Price: Low to High" data-es="Precio: Menor a Mayor">Price: Low to High</option>
+                    <option value="price-high" data-en="Price: High to Low" data-es="Precio: Mayor a Menor">Price: High to Low</option>
+                </select>
+            </div>
+            <button id="theme-toggle" class="theme-toggle-btn" title="Toggle Dark Mode">
+                🌙
+            </button>
+            <button id="cart-button" class="cart-icon-btn">
+                <img src="assets/icons/cart.svg" alt="Shopping Cart" width="24" height="24">
+                <span id="cart-count">0</span>
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <section id="new-phones" class="product-section">
+            <h2 data-en="New Phones" data-es="Teléfonos Nuevos">New Phones</h2>
+            <div class="products">
+                <div class="product" data-category="new" data-price="999" data-specs="6.1-inch Super Retina XDR display, A17 Pro chip, 48MP camera system" data-features="Face ID, 5G capable, Ceramic Shield front, Water resistant (IP68)" data-images="https://picsum.photos/400/400?random=1,https://picsum.photos/400/400?random=2,https://picsum.photos/400/400?random=3">
+                    <img src="https://picsum.photos/300/300?random=1" alt="iPhone 15">
+                    <h3>iPhone 15</h3>
+                    <p class="price">$999</p>
+                    <p class="details" data-en="Latest iPhone with advanced camera and A17 chip." data-es="Último iPhone con cámara avanzada y chip A17.">Latest iPhone with advanced camera and A17 chip.</p>
+                    <button class="add-to-cart" data-product="iPhone 15" data-price="999" data-en="Add to Cart" data-es="Agregar al Carrito">Add to Cart</button>
+                </div>
+                <div class="product" data-category="new" data-price="899" data-specs="6.2-inch Dynamic AMOLED 2X, Snapdragon 8 Gen 3, 50MP camera" data-features="S Pen support, 5G, IP68 water resistance, 5000mAh battery" data-images="https://picsum.photos/400/400?random=4,https://picsum.photos/400/400?random=5,https://picsum.photos/400/400?random=6">
+                    <img src="https://picsum.photos/300/300?random=2" alt="Samsung Galaxy S24">
+                    <h3>Samsung Galaxy S24</h3>
+                    <p class="price">$899</p>
+                    <p class="details" data-en="Powerful Android phone with stunning display." data-es="Teléfono Android potente con pantalla impresionante.">Powerful Android phone with stunning display.</p>
+                    <button class="add-to-cart" data-product="Samsung Galaxy S24" data-price="899" data-en="Add to Cart" data-es="Agregar al Carrito">Add to Cart</button>
+                </div>
+                <div class="product" data-category="new" data-price="699" data-specs="6.2-inch OLED display, Google Tensor G3, 50MP camera" data-features="Pure Android, 7 years updates, Magic Eraser, Water resistant" data-images="https://picsum.photos/400/400?random=7,https://picsum.photos/400/400?random=8,https://picsum.photos/400/400?random=9">
+                    <img src="https://picsum.photos/300/300?random=3" alt="Google Pixel 8">
+                    <h3>Google Pixel 8</h3>
+                    <p class="price">$699</p>
+                    <p class="details" data-en="Pure Android experience with excellent camera." data-es="Experiencia Android pura con excelente cámara.">Pure Android experience with excellent camera.</p>
+                    <button class="add-to-cart" data-product="Google Pixel 8" data-price="699" data-en="Add to Cart" data-es="Agregar al Carrito">Add to Cart</button>
+                </div>
+                <div class="product" data-category="new" data-price="799" data-specs="6.7-inch ProMotion OLED, A17 Pro chip, Pro camera system" data-features="Face ID, 5G, Titanium design, Action Button, Water resistant (IP68)" data-images="https://picsum.photos/400/400?random=10,https://picsum.photos/400/400?random=11,https://picsum.photos/400/400?random=12">
+                    <img src="https://picsum.photos/300/300?random=10" alt="iPhone 15 Pro">
+                    <h3>iPhone 15 Pro</h3>
+                    <p class="price">$799</p>
+                    <p class="details" data-en="Professional camera system with titanium design." data-es="Sistema de cámara profesional con diseño de titanio.">Professional camera system with titanium design.</p>
+                    <button class="add-to-cart" data-product="iPhone 15 Pro" data-price="799" data-en="Add to Cart" data-es="Agregar al Carrito">Add to Cart</button>
+                </div>
+                <div class="product" data-category="new" data-price="1099" data-specs="6.9-inch ProMotion OLED, A17 Pro chip, Advanced camera system" data-features="Face ID, 5G, Titanium design, Action Button, Water resistant (IP68)" data-images="https://picsum.photos/400/400?random=13,https://picsum.photos/400/400?random=14,https://picsum.photos/400/400?random=15">
+                    <img src="https://picsum.photos/300/300?random=11" alt="iPhone 15 Pro Max">
+                    <h3>iPhone 15 Pro Max</h3>
+                    <p class="price">$1099</p>
+                    <p class="details" data-en="Ultimate iPhone experience with largest display." data-es="Experiencia iPhone definitiva con pantalla más grande.">Ultimate iPhone experience with largest display.</p>
+                    <button class="add-to-cart" data-product="iPhone 15 Pro Max" data-price="1099" data-en="Add to Cart" data-es="Agregar al Carrito">Add to Cart</button>
+                </div>
+            </div>
+        </section>
+
+        <section id="used-phones" class="product-section">
+            <h2 data-en="Used Phones" data-es="Teléfonos Usados">Used Phones</h2>
+            <div class="products">
+                <div class="product" data-category="used" data-price="599" data-specs="6.1-inch Super Retina XDR, A15 Bionic chip, Dual 12MP camera" data-features="Face ID, 5G, Ceramic Shield, Water resistant (IP68), 90-day warranty" data-condition="Excellent - Minor wear" data-images="https://picsum.photos/400/400?random=16,https://picsum.photos/400/400?random=17,https://picsum.photos/400/400?random=18">
+                    <img src="https://picsum.photos/300/300?random=4" alt="iPhone 13 Used">
+                    <h3>iPhone 13 (Used)</h3>
+                    <p class="price">$599</p>
+                    <p class="details" data-en="Refurbished iPhone 13 in excellent condition." data-es="iPhone 13 reacondicionado en excelente condición.">Refurbished iPhone 13 in excellent condition.</p>
+                    <button class="add-to-cart" data-product="iPhone 13 (Used)" data-price="599" data-en="Add to Cart" data-es="Agregar al Carrito">Add to Cart</button>
+                </div>
+                <div class="product" data-category="used" data-price="499" data-specs="6.1-inch Dynamic AMOLED, Snapdragon 8 Gen 1, Triple 50MP camera" data-features="S Pen compatible, 5G, IP68 water resistance, 4500mAh battery, 6-month warranty" data-condition="Very Good - Light scratches" data-images="https://picsum.photos/400/400?random=19,https://picsum.photos/400/400?random=20,https://picsum.photos/400/400?random=21">
+                    <img src="https://picsum.photos/300/300?random=5" alt="Samsung Galaxy S22 Used">
+                    <h3>Samsung Galaxy S22 (Used)</h3>
+                    <p class="price">$499</p>
+                    <p class="details" data-en="Certified pre-owned with warranty." data-es="Certificado pre-propiedad con garantía.">Certified pre-owned with warranty.</p>
+                    <button class="add-to-cart" data-product="Samsung Galaxy S22 (Used)" data-price="499" data-en="Add to Cart" data-es="Agregar al Carrito">Add to Cart</button>
+                </div>
+                <div class="product" data-category="used" data-price="399" data-specs="6.3-inch OLED, Google Tensor G2, 50MP camera" data-features="Pure Android, 3 years updates, Water resistant, 6-month warranty" data-condition="Good - Screen protector included" data-images="https://picsum.photos/400/400?random=22,https://picsum.photos/400/400?random=23,https://picsum.photos/400/400?random=24">
+                    <img src="https://picsum.photos/300/300?random=6" alt="Google Pixel 7 Used">
+                    <h3>Google Pixel 7 (Used)</h3>
+                    <p class="price">$399</p>
+                    <p class="details" data-en="Like new condition, fully tested." data-es="Como nuevo, completamente probado.">Like new condition, fully tested.</p>
+                    <button class="add-to-cart" data-product="Google Pixel 7 (Used)" data-price="399" data-en="Add to Cart" data-es="Agregar al Carrito">Add to Cart</button>
+                </div>
+                <div class="product" data-category="used" data-price="699" data-specs="6.1-inch Super Retina XDR, A14 Bionic chip, Dual 12MP camera" data-features="Face ID, 5G, Ceramic Shield, Water resistant (IP68), 90-day warranty" data-condition="Very Good - Minor wear" data-images="https://picsum.photos/400/400?random=25,https://picsum.photos/400/400?random=26,https://picsum.photos/400/400?random=27">
+                    <img src="https://picsum.photos/300/300?random=12" alt="iPhone 12 Used">
+                    <h3>iPhone 12 (Used)</h3>
+                    <p class="price">$699</p>
+                    <p class="details" data-en="Compact design with powerful performance." data-es="Diseño compacto con rendimiento potente.">Compact design with powerful performance.</p>
+                    <button class="add-to-cart" data-product="iPhone 12 (Used)" data-price="699" data-en="Add to Cart" data-es="Agregar al Carrito">Add to Cart</button>
+                </div>
+                <div class="product" data-category="used" data-price="349" data-specs="6.4-inch Dynamic AMOLED, Snapdragon 865, Triple 64MP camera" data-features="S Pen included, 5G, IP68 water resistance, 4000mAh battery, 3-month warranty" data-condition="Good - Battery health 85%" data-images="https://picsum.photos/400/400?random=28,https://picsum.photos/400/400?random=29,https://picsum.photos/400/400?random=30">
+                    <img src="https://picsum.photos/300/300?random=13" alt="Samsung Galaxy Note 20 Used">
+                    <h3>Samsung Galaxy Note 20 (Used)</h3>
+                    <p class="price">$349</p>
+                    <p class="details" data-en="Productivity powerhouse with S Pen." data-es="Potencia de productividad con S Pen.">Productivity powerhouse with S Pen.</p>
+                    <button class="add-to-cart" data-product="Samsung Galaxy Note 20 (Used)" data-price="349" data-en="Add to Cart" data-es="Agregar al Carrito">Add to Cart</button>
+                </div>
+            </div>
+        </section>
+
+        <section id="accessories" class="product-section">
+            <h2 data-en="Accessories" data-es="Accesorios">Accessories</h2>
+            <div class="products">
+                <div class="product" data-category="accessories" data-price="29" data-specs="15W fast wireless charging, LED indicator, Overheat protection" data-features="Compatible with all Qi-enabled devices, Foldable design, 6ft USB-C cable included" data-compatibility="iPhone, Samsung, Google Pixel, and all Qi devices" data-images="https://picsum.photos/400/400?random=31,https://picsum.photos/400/400?random=32,https://picsum.photos/400/400?random=33">
+                    <img src="https://picsum.photos/300/300?random=7" alt="Wireless Charger">
+                    <h3>Wireless Charger</h3>
+                    <p class="price">$29</p>
+                    <p class="details" data-en="Fast wireless charging for all devices." data-es="Carga inalámbrica rápida para todos los dispositivos.">Fast wireless charging for all devices.</p>
+                    <button class="add-to-cart" data-product="Wireless Charger" data-price="29" data-en="Add to Cart" data-es="Agregar al Carrito">Add to Cart</button>
+                </div>
+                <div class="product" data-category="accessories" data-price="19" data-specs="TPU material, Military-grade drop protection, Precise cutouts" data-features="Shock absorption, Anti-slip grip, Easy installation, 1-year warranty" data-compatibility="iPhone 15/14/13 series" data-images="https://picsum.photos/400/400?random=34,https://picsum.photos/400/400?random=35,https://picsum.photos/400/400?random=36">
+                    <img src="https://picsum.photos/300/300?random=8" alt="Phone Case">
+                    <h3>Protective Case</h3>
+                    <p class="price">$19</p>
+                    <p class="details" data-en="Durable case with shock absorption." data-es="Estuche duradero con absorción de impactos.">Durable case with shock absorption.</p>
+                    <button class="add-to-cart" data-product="Protective Case" data-price="19" data-en="Add to Cart" data-es="Agregar al Carrito">Add to Cart</button>
+                </div>
+                <div class="product" data-category="accessories" data-price="9" data-specs="Tempered glass, 9H hardness, Oleophobic coating" data-features="99.9% clarity, Bubble-free installation, Self-healing properties, 6-month warranty" data-compatibility="iPhone 15/14/13 series" data-images="https://picsum.photos/400/400?random=37,https://picsum.photos/400/400?random=38,https://picsum.photos/400/400?random=39">
+                    <img src="https://picsum.photos/300/300?random=9" alt="Screen Protector">
+                    <h3>Screen Protector</h3>
+                    <p class="price">$9</p>
+                    <p class="details" data-en="Crystal clear protection against scratches." data-es="Protección cristalina contra rayones.">Crystal clear protection against scratches.</p>
+                    <button class="add-to-cart" data-product="Screen Protector" data-price="9" data-en="Add to Cart" data-es="Agregar al Carrito">Add to Cart</button>
+                </div>
+                <div class="product" data-category="accessories" data-price="49" data-specs="20W USB-C Power Delivery, GaN technology, Compact design" data-features="Fast charging, Multiple USB ports, Overcurrent protection, 2-year warranty" data-compatibility="All USB-C devices" data-images="https://picsum.photos/400/400?random=40,https://picsum.photos/400/400?random=41,https://picsum.photos/400/400?random=42">
+                    <img src="https://picsum.photos/300/300?random=14" alt="USB-C Charger">
+                    <h3>USB-C Wall Charger</h3>
+                    <p class="price">$49</p>
+                    <p class="details" data-en="Fast charging for all your devices." data-es="Carga rápida para todos tus dispositivos.">Fast charging for all your devices.</p>
+                    <button class="add-to-cart" data-product="USB-C Wall Charger" data-price="49" data-en="Add to Cart" data-es="Agregar al Carrito">Add to Cart</button>
+                </div>
+                <div class="product" data-category="accessories" data-price="39" data-specs="Active Noise Cancellation, 30-hour battery, Wireless charging" data-features="Premium sound quality, Comfortable fit, Touch controls, 1-year warranty" data-compatibility="All Bluetooth devices" data-images="https://picsum.photos/400/400?random=43,https://picsum.photos/400/400?random=44,https://picsum.photos/400/400?random=45">
+                    <img src="https://picsum.photos/300/300?random=15" alt="Wireless Earbuds">
+                    <h3>Wireless Earbuds</h3>
+                    <p class="price">$39</p>
+                    <p class="details" data-en="Premium wireless audio experience." data-es="Experiencia de audio inalámbrico premium.">Premium wireless audio experience.</p>
+                    <button class="add-to-cart" data-product="Wireless Earbuds" data-price="39" data-en="Add to Cart" data-es="Agregar al Carrito">Add to Cart</button>
+                </div>
+                <div class="product" data-category="accessories" data-price="25" data-specs="Leather material, Card slots, RFID blocking" data-features="Slim profile, Multiple compartments, Premium stitching, 6-month warranty" data-compatibility="All phone sizes" data-images="https://picsum.photos/400/400?random=46,https://picsum.photos/400/400?random=47,https://picsum.photos/400/400?random=48">
+                    <img src="https://picsum.photos/300/300?random=16" alt="Phone Wallet Case">
+                    <h3>Phone Wallet Case</h3>
+                    <p class="price">$25</p>
+                    <p class="details" data-en="Convenient wallet and protection in one." data-es="Billetera conveniente y protección en uno.">Convenient wallet and protection in one.</p>
+                    <button class="add-to-cart" data-product="Phone Wallet Case" data-price="25" data-en="Add to Cart" data-es="Agregar al Carrito">Add to Cart</button>
+                </div>
+                <div class="product" data-category="accessories" data-price="15" data-specs="USB-C to Lightning, 6ft braided cable, MFi certified" data-features="Fast charging, Data sync, Durable construction, 1-year warranty" data-compatibility="iPhone 15/14/13 series" data-images="https://picsum.photos/400/400?random=49,https://picsum.photos/400/400?random=50,https://picsum.photos/400/400?random=51">
+                    <img src="https://picsum.photos/300/300?random=17" alt="USB-C to Lightning Cable">
+                    <h3>USB-C to Lightning Cable</h3>
+                    <p class="price">$15</p>
+                    <p class="details" data-en="Fast charging and data cable for iPhone." data-es="Cable de carga rápida y datos para iPhone.">Fast charging and data cable for iPhone.</p>
+                    <button class="add-to-cart" data-product="USB-C to Lightning Cable" data-price="15" data-en="Add to Cart" data-es="Agregar al Carrito">Add to Cart</button>
+                </div>
+                <div class="product" data-category="accessories" data-price="35" data-specs="10000mAh capacity, USB-C PD, Wireless charging" data-features="Fast charging output, Multiple ports, LED indicator, 18-month warranty" data-compatibility="All USB-C devices" data-images="https://picsum.photos/400/400?random=52,https://picsum.photos/400/400?random=53,https://picsum.photos/400/400?random=54">
+                    <img src="https://picsum.photos/300/300?random=18" alt="Portable Charger">
+                    <h3>Portable Power Bank</h3>
+                    <p class="price">$35</p>
+                    <p class="details" data-en="High-capacity power bank for on-the-go charging." data-es="Banco de energía de alta capacidad para carga en movimiento.">High-capacity power bank for on-the-go charging.</p>
+                    <button class="add-to-cart" data-product="Portable Power Bank" data-price="35" data-en="Add to Cart" data-es="Agregar al Carrito">Add to Cart</button>
+                </div>
+                <div class="product" data-category="accessories" data-price="12" data-specs="Silicone material, Anti-slip design, Precise cutouts" data-features="Shock absorption, Easy installation, Color options, 6-month warranty" data-compatibility="iPhone 15/14/13 series" data-images="https://picsum.photos/400/400?random=55,https://picsum.photos/400/400?random=56,https://picsum.photos/400/400?random=57">
+                    <img src="https://picsum.photos/300/300?random=19" alt="Silicone Phone Case">
+                    <h3>Silicone Phone Case</h3>
+                    <p class="price">$12</p>
+                    <p class="details" data-en="Soft silicone protection with great grip." data-es="Protección de silicona suave con excelente agarre.">Soft silicone protection with great grip.</p>
+                    <button class="add-to-cart" data-product="Silicone Phone Case" data-price="12" data-en="Add to Cart" data-es="Agregar al Carrito">Add to Cart</button>
+                </div>
+                <div class="product" data-category="accessories" data-price="45" data-specs="Bluetooth 5.2, 40mm drivers, Active noise cancellation" data-features="Wireless charging case, 30-hour battery, Touch controls, 2-year warranty" data-compatibility="All Bluetooth devices" data-images="https://picsum.photos/400/400?random=58,https://picsum.photos/400/400?random=59,https://picsum.photos/400/400?random=60">
+                    <img src="https://picsum.photos/300/300?random=20" alt="Bluetooth Headphones">
+                    <h3>Bluetooth Headphones</h3>
+                    <p class="price">$45</p>
+                    <p class="details" data-en="Over-ear headphones with noise cancellation." data-es="Audífonos sobre la oreja con cancelación de ruido.">Over-ear headphones with noise cancellation.</p>
+                    <button class="add-to-cart" data-product="Bluetooth Headphones" data-price="45" data-en="Add to Cart" data-es="Agregar al Carrito">Add to Cart</button>
+                </div>
+                <div class="product" data-category="accessories" data-price="8" data-specs="Plastic material, Universal fit, Anti-scratch" data-features="Ring holder, Stand function, Easy attachment, 3-month warranty" data-compatibility="All phone sizes" data-images="https://picsum.photos/400/400?random=61,https://picsum.photos/400/400?random=62,https://picsum.photos/400/400?random=63">
+                    <img src="https://picsum.photos/300/300?random=21" alt="Phone Ring Holder">
+                    <h3>Phone Ring Holder</h3>
+                    <p class="price">$8</p>
+                    <p class="details" data-en="Convenient ring grip for easy holding." data-es="Anillo conveniente para sujetar fácilmente.">Convenient ring grip for easy holding.</p>
+                    <button class="add-to-cart" data-product="Phone Ring Holder" data-price="8" data-en="Add to Cart" data-es="Agregar al Carrito">Add to Cart</button>
+                </div>
+                <div class="product" data-category="accessories" data-price="22" data-specs="Aluminum alloy, Adjustable height, Anti-slip base" data-features="Stable support, Multiple angles, Compact design, 1-year warranty" data-compatibility="All phone sizes" data-images="https://picsum.photos/400/400?random=64,https://picsum.photos/400/400?random=65,https://picsum.photos/400/400?random=66">
+                    <img src="https://picsum.photos/300/300?random=22" alt="Phone Stand">
+                    <h3>Adjustable Phone Stand</h3>
+                    <p class="price">$22</p>
+                    <p class="details" data-en="Versatile stand for hands-free viewing." data-es="Soporte versátil para visualización sin manos.">Versatile stand for hands-free viewing.</p>
+                    <button class="add-to-cart" data-product="Adjustable Phone Stand" data-price="22" data-en="Add to Cart" data-es="Agregar al Carrito">Add to Cart</button>
+                </div>
+                <div class="product" data-category="accessories" data-price="18" data-specs="TPU + PC material, Shock absorption, Slim design" data-features="Military-grade protection, Precise cutouts, Matte finish, 1-year warranty" data-compatibility="Samsung Galaxy S24/S23 series" data-images="https://picsum.photos/400/400?random=67,https://picsum.photos/400/400?random=68,https://picsum.photos/400/400?random=69">
+                    <img src="https://picsum.photos/300/300?random=23" alt="Samsung Phone Case">
+                    <h3>Samsung Protective Case</h3>
+                    <p class="price">$18</p>
+                    <p class="details" data-en="Durable case designed for Samsung phones." data-es="Estuche duradero diseñado para teléfonos Samsung.">Durable case designed for Samsung phones.</p>
+                    <button class="add-to-cart" data-product="Samsung Protective Case" data-price="18" data-en="Add to Cart" data-es="Agregar al Carrito">Add to Cart</button>
+                </div>
+                <div class="product" data-category="accessories" data-price="55" data-specs="1080p resolution, Wide-angle lens, Clip-on design" data-features="Video recording, Photo mode, Adjustable clip, 1-year warranty" data-compatibility="All phone sizes" data-images="https://picsum.photos/400/400?random=70,https://picsum.photos/400/400?random=71,https://picsum.photos/400/400?random=72">
+                    <img src="https://picsum.photos/300/300?random=24" alt="Phone Camera Lens">
+                    <h3>Clip-on Camera Lens Kit</h3>
+                    <p class="price">$55</p>
+                    <p class="details" data-en="Enhance your phone's camera capabilities." data-es="Mejora las capacidades de la cámara de tu teléfono.">Enhance your phone's camera capabilities.</p>
+                    <button class="add-to-cart" data-product="Clip-on Camera Lens Kit" data-price="55" data-en="Add to Cart" data-es="Agregar al Carrito">Add to Cart</button>
+                </div>
+                <div class="product" data-category="accessories" data-price="30" data-specs="Wireless charging, LED indicator, Foldable design" data-features="15W fast charging, Compatible with all Qi devices, Compact storage, 2-year warranty" data-compatibility="iPhone, Samsung, Google Pixel" data-images="https://picsum.photos/400/400?random=73,https://picsum.photos/400/400?random=74,https://picsum.photos/400/400?random=75">
+                    <img src="https://picsum.photos/300/300?random=25" alt="Foldable Wireless Charger">
+                    <h3>Foldable Wireless Charger</h3>
+                    <p class="price">$30</p>
+                    <p class="details" data-en="Portable wireless charging pad." data-es="Almohadilla de carga inalámbrica portátil.">Portable wireless charging pad.</p>
+                    <button class="add-to-cart" data-product="Foldable Wireless Charger" data-price="30" data-en="Add to Cart" data-es="Agregar al Carrito">Add to Cart</button>
+                </div>
+                <div class="product" data-category="accessories" data-price="65" data-specs="1080p webcam, Auto-focus, Built-in microphone" data-features="Video calls, Streaming, Adjustable mount, Privacy cover, 2-year warranty" data-compatibility="Windows, Mac, Linux" data-images="https://picsum.photos/400/400?random=76,https://picsum.photos/400/400?random=77,https://picsum.photos/400/400?random=78">
+                    <img src="https://picsum.photos/300/300?random=26" alt="Webcam">
+                    <h3>HD Webcam</h3>
+                    <p class="price">$65</p>
+                    <p class="details" data-en="High-definition webcam for video calls." data-es="Cámara web de alta definición para videollamadas.">High-definition webcam for video calls.</p>
+                    <button class="add-to-cart" data-product="HD Webcam" data-price="65" data-en="Add to Cart" data-es="Agregar al Carrito">Add to Cart</button>
+                </div>
+                <div class="product" data-category="accessories" data-price="14" data-specs="Microfiber cloth, Cleaning solution, Anti-static" data-features="Streak-free cleaning, Safe for all screens, Compact case, Reusable" data-compatibility="All devices" data-images="https://picsum.photos/400/400?random=79,https://picsum.photos/400/400?random=80,https://picsum.photos/400/400?random=81">
+                    <img src="https://picsum.photos/300/300?random=27" alt="Screen Cleaning Kit">
+                    <h3>Screen Cleaning Kit</h3>
+                    <p class="price">$14</p>
+                    <p class="details" data-en="Complete kit for cleaning screens and devices." data-es="Kit completo para limpiar pantallas y dispositivos.">Complete kit for cleaning screens and devices.</p>
+                    <button class="add-to-cart" data-product="Screen Cleaning Kit" data-price="14" data-en="Add to Cart" data-es="Agregar al Carrito">Add to Cart</button>
+                </div>
+                <div class="product" data-category="accessories" data-price="28" data-specs="Bluetooth 5.0, Stereo sound, Built-in mic" data-features="Wireless connectivity, Call answering, Voice assistant, 12-hour battery" data-compatibility="All Bluetooth devices" data-images="https://picsum.photos/400/400?random=82,https://picsum.photos/400/400?random=83,https://picsum.photos/400/400?random=84">
+                    <img src="https://picsum.photos/300/300?random=28" alt="Bluetooth Speaker">
+                    <h3>Portable Bluetooth Speaker</h3>
+                    <p class="price">$28</p>
+                    <p class="details" data-en="Compact speaker with great sound quality." data-es="Altavoz compacto con excelente calidad de sonido.">Compact speaker with great sound quality.</p>
+                    <button class="add-to-cart" data-product="Portable Bluetooth Speaker" data-price="28" data-en="Add to Cart" data-es="Agregar al Carrito">Add to Cart</button>
+                </div>
+                <div class="product" data-category="accessories" data-price="42" data-specs="USB-C hub, 4K HDMI, USB-A ports" data-features="Multiple connectivity, Fast data transfer, Ethernet port, SD card slots" data-compatibility="USB-C devices" data-images="https://picsum.photos/400/400?random=85,https://picsum.photos/400/400?random=86,https://picsum.photos/400/400?random=87">
+                    <img src="https://picsum.photos/300/300?random=29" alt="USB-C Hub">
+                    <h3>Multi-Port USB-C Hub</h3>
+                    <p class="price">$42</p>
+                    <p class="details" data-en="Expand connectivity with multiple ports." data-es="Expande la conectividad con múltiples puertos.">Expand connectivity with multiple ports.</p>
+                    <button class="add-to-cart" data-product="Multi-Port USB-C Hub" data-price="42" data-en="Add to Cart" data-es="Agregar al Carrito">Add to Cart</button>
+                </div>
+                <div class="product" data-category="accessories" data-price="16" data-specs="TPU material, Clear design, Bubble-free" data-features="Full protection, Easy application, Self-healing, 6-month warranty" data-compatibility="iPhone 15/14/13 series" data-images="https://picsum.photos/400/400?random=88,https://picsum.photos/400/400?random=89,https://picsum.photos/400/400?random=90">
+                    <img src="https://picsum.photos/300/300?random=30" alt="Clear Phone Case">
+                    <h3>Clear Phone Case</h3>
+                    <p class="price">$16</p>
+                    <p class="details" data-en="Invisible protection that shows off your phone." data-es="Protección invisible que muestra tu teléfono.">Invisible protection that shows off your phone.</p>
+                    <button class="add-to-cart" data-product="Clear Phone Case" data-price="16" data-en="Add to Cart" data-es="Agregar al Carrito">Add to Cart</button>
+                </div>
+                <div class="product" data-category="accessories" data-price="38" data-specs="20000mAh capacity, Quick charge, LED display" data-features="High capacity, Multiple outputs, Safety protection, 24-month warranty" data-compatibility="All USB devices" data-images="https://picsum.photos/400/400?random=91,https://picsum.photos/400/400?random=92,https://picsum.photos/400/400?random=93">
+                    <img src="https://picsum.photos/300/300?random=31" alt="Large Power Bank">
+                    <h3>Large Capacity Power Bank</h3>
+                    <p class="price">$38</p>
+                    <p class="details" data-en="Extended battery life for all your devices." data-es="Vida de batería extendida para todos tus dispositivos.">Extended battery life for all your devices.</p>
+                    <button class="add-to-cart" data-product="Large Capacity Power Bank" data-price="38" data-en="Add to Cart" data-es="Agregar al Carrito">Add to Cart</button>
+                </div>
+                <div class="product" data-category="accessories" data-price="24" data-specs="Aluminum body, Wireless charging, LED indicator" data-features="Premium build, Fast charging, Compatible with MagSafe, 1-year warranty" data-compatibility="iPhone 15/14/13 series" data-images="https://picsum.photos/400/400?random=94,https://picsum.photos/400/400?random=95,https://picsum.photos/400/400?random=96">
+                    <img src="https://picsum.photos/300/300?random=32" alt="Wireless Charging Stand">
+                    <h3>Wireless Charging Stand</h3>
+                    <p class="price">$24</p>
+                    <p class="details" data-en="Elegant stand for wireless charging." data-es="Soporte elegante para carga inalámbrica.">Elegant stand for wireless charging.</p>
+                    <button class="add-to-cart" data-product="Wireless Charging Stand" data-price="24" data-en="Add to Cart" data-es="Agregar al Carrito">Add to Cart</button>
+                </div>
+                <div class="product" data-category="accessories" data-price="52" data-specs="ANC technology, 35-hour battery, Premium drivers" data-features="Superior noise cancellation, Hi-Res audio, Comfortable fit, 2-year warranty" data-compatibility="All Bluetooth devices" data-images="https://picsum.photos/400/400?random=97,https://picsum.photos/400/400?random=98,https://picsum.photos/400/400?random=99">
+                    <img src="https://picsum.photos/300/300?random=33" alt="Noise Cancelling Headphones">
+                    <h3>Noise Cancelling Headphones</h3>
+                    <p class="price">$52</p>
+                    <p class="details" data-en="Block out noise and enjoy pure audio." data-es="Bloquea el ruido y disfruta de audio puro.">Block out noise and enjoy pure audio.</p>
+                    <button class="add-to-cart" data-product="Noise Cancelling Headphones" data-price="52" data-en="Add to Cart" data-es="Agregar al Carrito">Add to Cart</button>
+                </div>
+                <div class="product" data-category="accessories" data-price="11" data-specs="Gel material, Anti-slip, Washable" data-features="Shock protection, Screen protection, Easy to clean, Reusable" data-compatibility="All phone sizes" data-images="https://picsum.photos/400/400?random=100,https://picsum.photos/400/400?random=101,https://picsum.photos/400/400?random=102">
+                    <img src="https://picsum.photos/300/300?random=34" alt="Gel Screen Protector">
+                    <h3>Gel Screen Protector</h3>
+                    <p class="price">$11</p>
+                    <p class="details" data-en="Flexible gel protection for your screen." data-es="Protección de gel flexible para tu pantalla.">Flexible gel protection for your screen.</p>
+                    <button class="add-to-cart" data-product="Gel Screen Protector" data-price="11" data-en="Add to Cart" data-es="Agregar al Carrito">Add to Cart</button>
+                </div>
+                <div class="product" data-category="accessories" data-price="32" data-specs="Bluetooth 5.3, True wireless, Touch controls" data-features="Active noise cancellation, 8-hour battery, Wireless charging case, 2-year warranty" data-compatibility="All Bluetooth devices" data-images="https://picsum.photos/400/400?random=103,https://picsum.photos/400/400?random=104,https://picsum.photos/400/400?random=105">
+                    <img src="https://picsum.photos/300/300?random=35" alt="Premium Wireless Earbuds">
+                    <h3>Premium Wireless Earbuds</h3>
+                    <p class="price">$32</p>
+                    <p class="details" data-en="High-quality wireless earbuds with ANC." data-es="Audífonos inalámbricos de alta calidad con ANC.">High-quality wireless earbuds with ANC.</p>
+                    <button class="add-to-cart" data-product="Premium Wireless Earbuds" data-price="32" data-en="Add to Cart" data-es="Agregar al Carrito">Add to Cart</button>
+                </div>
+                <div class="product" data-category="accessories" data-price="27" data-specs="USB-C to USB-C, 10ft length, Braided design" data-features="Fast charging, Data transfer up to 480Mbps, Durable construction, 1-year warranty" data-compatibility="All USB-C devices" data-images="https://picsum.photos/400/400?random=106,https://picsum.photos/400/400?random=107,https://picsum.photos/400/400?random=108">
+                    <img src="https://picsum.photos/300/300?random=36" alt="USB-C Cable">
+                    <h3>USB-C Charging Cable</h3>
+                    <p class="price">$27</p>
+                    <p class="details" data-en="Long braided cable for charging and data." data-es="Cable trenzado largo para carga y datos.">Long braided cable for charging and data.</p>
+                    <button class="add-to-cart" data-product="USB-C Charging Cable" data-price="27" data-en="Add to Cart" data-es="Agregar al Carrito">Add to Cart</button>
+                </div>
+                <div class="product" data-category="accessories" data-price="21" data-specs="TPU hybrid, Shock absorption, Anti-yellowing" data-features="Dual layer protection, Raised edges, Easy installation, 1-year warranty" data-compatibility="Google Pixel 8/7 series" data-images="https://picsum.photos/400/400?random=109,https://picsum.photos/400/400?random=110,https://picsum.photos/400/400?random=111">
+                    <img src="https://picsum.photos/300/300?random=37" alt="Google Pixel Case">
+                    <h3>Google Pixel Protective Case</h3>
+                    <p class="price">$21</p>
+                    <p class="details" data-en="Specially designed case for Google Pixel phones." data-es="Estuche especialmente diseñado para teléfonos Google Pixel.">Specially designed case for Google Pixel phones.</p>
+                    <button class="add-to-cart" data-product="Google Pixel Protective Case" data-price="21" data-en="Add to Cart" data-es="Agregar al Carrito">Add to Cart</button>
+                </div>
+                <div class="product" data-category="accessories" data-price="58" data-specs="4K resolution, Gimbal stabilization, Waterproof" data-features="Professional video recording, Image stabilization, Underwater use, 2-year warranty" data-compatibility="Smartphones with 1/4-inch tripod mount" data-images="https://picsum.photos/400/400?random=112,https://picsum.photos/400/400?random=113,https://picsum.photos/400/400?random=114">
+                    <img src="https://picsum.photos/300/300?random=38" alt="Phone Gimbal">
+                    <h3>Professional Phone Gimbal</h3>
+                    <p class="price">$58</p>
+                    <p class="details" data-en="Stabilized gimbal for smooth video recording." data-es="Gimbal estabilizado para grabación de video suave.">Stabilized gimbal for smooth video recording.</p>
+                    <button class="add-to-cart" data-product="Professional Phone Gimbal" data-price="58" data-en="Add to Cart" data-es="Agregar al Carrito">Add to Cart</button>
+                </div>
+                <div class="product" data-category="accessories" data-price="13" data-specs="Plastic frame, Universal size, Adjustable" data-features="360-degree rotation, Anti-slip pads, Compact storage, 6-month warranty" data-compatibility="All phone sizes" data-images="https://picsum.photos/400/400?random=115,https://picsum.photos/400/400?random=116,https://picsum.photos/400/400?random=117">
+                    <img src="https://picsum.photos/300/300?random=39" alt="Phone Holder">
+                    <h3>Car Phone Holder</h3>
+                    <p class="price">$13</p>
+                    <p class="details" data-en="Secure holder for your phone in the car." data-es="Soporte seguro para tu teléfono en el auto.">Secure holder for your phone in the car.</p>
+                    <button class="add-to-cart" data-product="Car Phone Holder" data-price="13" data-en="Add to Cart" data-es="Agregar al Carrito">Add to Cart</button>
+                </div>
+                <div class="product" data-category="accessories" data-price="36" data-specs="Wireless charging, LED indicators, Compact size" data-features="10W fast charging, Multiple device support, Safety features, 18-month warranty" data-compatibility="Qi-enabled devices" data-images="https://images.unsplash.com/photo-1586953208448-b95a79798f07?w=400,h=400,fit=crop,https://images.unsplash.com/photo-1609592806580-9d4e6e1c6b8d?w=400,h=400,fit=crop,https://images.unsplash.com/photo-1583394838336-acd977736f90?w=400,h=400,fit=crop">
+                    <img src="https://images.unsplash.com/photo-1586953208448-b95a79798f07?w=300,h=300,fit=crop" alt="Multi-Device Charger">
+                    <h3>Multi-Device Wireless Charger</h3>
+                    <p class="price">$36</p>
+                    <p class="details" data-en="Charge multiple devices simultaneously." data-es="Carga múltiples dispositivos simultáneamente.">Charge multiple devices simultaneously.</p>
+                    <button class="add-to-cart" data-product="Multi-Device Wireless Charger" data-price="36" data-en="Add to Cart" data-es="Agregar al Carrito">Add to Cart</button>
+                </div>
+                <div class="product" data-category="accessories" data-price="19" data-specs="TPU material, Metallic finish, Slim profile" data-features="Premium look, Shock absorption, Easy installation, 1-year warranty" data-compatibility="iPhone 15/14/13 series" data-images="https://images.unsplash.com/photo-1565849904461-04a58ad377e0?w=400,h=400,fit=crop,https://images.unsplash.com/photo-1601593346740-925612772716?w=400,h=400,fit=crop,https://images.unsplash.com/photo-1583394838336-acd977736f90?w=400,h=400,fit=crop">
+                    <img src="https://images.unsplash.com/photo-1565849904461-04a58ad377e0?w=300,h=300,fit=crop" alt="Metallic Phone Case">
+                    <h3>Metallic Phone Case</h3>
+                    <p class="price">$19</p>
+                    <p class="details" data-en="Stylish metallic case with protection." data-es="Estuche metálico elegante con protección.">Stylish metallic case with protection.</p>
+                    <button class="add-to-cart" data-product="Metallic Phone Case" data-price="19" data-en="Add to Cart" data-es="Agregar al Carrito">Add to Cart</button>
+                </div>
+                <div class="product" data-category="accessories" data-price="44" data-specs="Bluetooth 5.1, Hi-Res audio, 40mm drivers" data-features="Superior sound quality, Comfortable padding, Long battery life, 2-year warranty" data-compatibility="All Bluetooth devices" data-images="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=400,h=400,fit=crop,https://images.unsplash.com/photo-1484704849700-f032a568e944?w=400,h=400,fit=crop,https://images.unsplash.com/photo-1583394838336-acd977736f90?w=400,h=400,fit=crop">
+                    <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=300,h=300,fit=crop" alt="Studio Headphones">
+                    <h3>Studio Monitor Headphones</h3>
+                    <p class="price">$44</p>
+                    <p class="details" data-en="Professional headphones for music production." data-es="Audífonos profesionales para producción musical.">Professional headphones for music production.</p>
+                    <button class="add-to-cart" data-product="Studio Monitor Headphones" data-price="44" data-en="Add to Cart" data-es="Agregar al Carrito">Add to Cart</button>
+                </div>
+                <div class="product" data-category="accessories" data-price="17" data-specs="Microfiber material, Lint-free, Anti-static" data-features="Safe for all surfaces, Absorbent, Machine washable, Reusable" data-compatibility="All devices" data-images="https://images.unsplash.com/photo-1583394838336-acd977736f90?w=400,h=400,fit=crop,https://images.unsplash.com/photo-1601593346740-925612772716?w=400,h=400,fit=crop,https://images.unsplash.com/photo-1586953208448-b95a79798f07?w=400,h=400,fit=crop">
+                    <img src="https://images.unsplash.com/photo-1583394838336-acd977736f90?w=300,h=300,fit=crop" alt="Cleaning Cloth">
+                    <h3>Microfiber Cleaning Cloth</h3>
+                    <p class="price">$17</p>
+                    <p class="details" data-en="Premium cloth for cleaning electronics." data-es="Tela premium para limpiar electrónicos.">Premium cloth for cleaning electronics.</p>
+                    <button class="add-to-cart" data-product="Microfiber Cleaning Cloth" data-price="17" data-en="Add to Cart" data-es="Agregar al Carrito">Add to Cart</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Modal for product details -->
+    <div id="product-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div id="modal-body">
+                <!-- Product details will be inserted here -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Shopping cart modal -->
+    <div id="cart-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2 data-en="Your Cart" data-es="Tu Carrito">Your Cart</h2>
+            <div id="cart-items">
+                <!-- Cart items will be inserted here -->
+            </div>
+            <div id="cart-total" data-en="Total: $0" data-es="Total: $0">Total: $0</div>
+            <button id="checkout-btn" data-en="Checkout" data-es="Pagar">Checkout</button>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3 data-en="Ph4You" data-es="Ph4You">Ph4You</h3>
+                <p data-en="Your trusted source for quality cell phones and accessories. We offer both new and certified pre-owned devices with warranty." data-es="Tu fuente confiable de teléfonos celulares y accesorios de calidad. Ofrecemos dispositivos nuevos y certificados usados con garantía.">Your trusted source for quality cell phones and accessories. We offer both new and certified pre-owned devices with warranty.</p>
+            </div>
+            <div class="footer-section">
+                <h4 data-en="Customer Service" data-es="Servicio al Cliente">Customer Service</h4>
+                <ul>
+                    <li><a href="#" data-en="Contact Us" data-es="Contáctanos">Contact Us</a></li>
+                    <li><a href="#" data-en="Shipping Info" data-es="Información de Envío">Shipping Info</a></li>
+                    <li><a href="#" data-en="Returns & Exchanges" data-es="Devoluciones y Cambios">Returns & Exchanges</a></li>
+                    <li><a href="#" data-en="Warranty Information" data-es="Información de Garantía">Warranty Information</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4 data-en="Shop" data-es="Tienda">Shop</h4>
+                <ul>
+                    <li><a href="#new-phones" data-en="New Phones" data-es="Teléfonos Nuevos">New Phones</a></li>
+                    <li><a href="#used-phones" data-en="Used Phones" data-es="Teléfonos Usados">Used Phones</a></li>
+                    <li><a href="#accessories" data-en="Accessories" data-es="Accesorios">Accessories</a></li>
+                    <li><a href="#" data-en="Special Offers" data-es="Ofertas Especiales">Special Offers</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4 data-en="Contact Information" data-es="Información de Contacto">Contact Information</h4>
+                <p>📧 support@cellstore.com</p>
+                <p>📞 1-800-CELLSTORE</p>
+                <p>📍 123 Tech Street<br>Digital City, DC 12345</p>
+                <p>🕒 Mon-Fri: 9AM-6PM EST</p>
+            </div>
+            <div class="footer-section">
+                <h4>Follow Us</h4>
+                <div class="social-icons">
+                    <a href="https://twitter.com/cellstore" class="social-icon twitter" title="Follow us on Twitter" target="_blank">
+                        <img src="assets/icons/twitter.svg" alt="Twitter" width="24" height="24">
+                    </a>
+                    <a href="https://youtube.com/@cellstore" class="social-icon youtube" title="Subscribe on YouTube" target="_blank">
+                        <img src="assets/icons/youtube.svg" alt="YouTube" width="24" height="24">
+                    </a>
+                    <a href="https://instagram.com/cellstore" class="social-icon instagram" title="Follow us on Instagram" target="_blank">
+                        <img src="assets/icons/instagram.svg" alt="Instagram" width="24" height="24">
+                    </a>
+                    <a href="https://facebook.com/cellstore" class="social-icon facebook" title="Like us on Facebook" target="_blank">
+                        <img src="assets/icons/facebook.svg" alt="Facebook" width="24" height="24">
+                    </a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h4 data-en="Language" data-es="Idioma">Language</h4>
+                <select id="language-select">
+                    <option value="en">English</option>
+                    <option value="es">Español</option>
+                </select>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p data-en="&copy; 2027 Ph4You. All rights By OBi reserved. | Privacy Policy | Terms of Service" data-es="&copy; 2027 Ph4You. Todos los derechos reservados por OBi. | Política de Privacidad | Términos de Servicio">&copy; 2027 CellStore. All rights By OBi reserved. | <a href="#" data-en="Privacy Policy" data-es="Política de Privacidad">Privacy Policy</a> | <a href="#" data-en="Terms of Service" data-es="Términos de Servicio">Terms of Service</a></p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+
+    <!-- Scroll to top button -->
+    <button class="scroll-to-top" id="scroll-to-top" title="Back to Top">↑</button>
+
+    <script>
+        // Scroll to top button functionality
+        const scrollToTopBtn = document.getElementById('scroll-to-top');
+
+        // Show/hide button based on scroll position
+        window.addEventListener('scroll', function() {
+            if (window.pageYOffset > 300) {
+                scrollToTopBtn.classList.add('show');
+            } else {
+                scrollToTopBtn.classList.remove('show');
+            }
+        });
+
+        // Scroll to top when clicked
+        scrollToTopBtn.addEventListener('click', function() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+    </script>
+</body>
+</html>
