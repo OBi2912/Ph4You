@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-en="Sell Your Phone - Ph4You" data-es="Vende Tu Teléfono - Ph4You">Sell Your Phone - Ph4You</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="header-left">
+            <div class="logo">
+                <h1><a href="index.html">Ph4You</a></h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html#new-phones" class="nav-link" data-category="new" data-en="New Phones" data-es="Teléfonos Nuevos">New Phones</a></li>
+                    <li><a href="index.html#used-phones" class="nav-link" data-category="used" data-en="Used Phones" data-es="Teléfonos Usados">Used Phones</a></li>
+                    <li><a href="index.html#accessories" class="nav-link" data-category="accessories" data-en="Accessories" data-es="Accesorios">Accessories</a></li>
+                    <li><a href="sell.html" class="nav-link active" data-category="sell" data-en="Sell Your Phone" data-es="Vende Tu Teléfono">Sell Your Phone</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="header-right">
+            <div class="header-controls">
+                <input type="text" id="search-input" data-en="Search products..." data-es="Buscar productos..." placeholder="Search products...">
+                <select id="sort-select">
+                    <option value="default" data-en="Sort by" data-es="Ordenar por">Sort by</option>
+                    <option value="price-low" data-en="Price: Low to High" data-es="Precio: Menor a Mayor">Price: Low to High</option>
+                    <option value="price-high" data-en="Price: High to Low" data-es="Precio: Mayor a Menor">Price: High to Low</option>
+                </select>
+            </div>
+            <button id="theme-toggle" class="theme-toggle-btn" title="Toggle Dark Mode">
+                🌙
+            </button>
+            <button id="cart-button" class="cart-icon-btn">
+                <img src="assets/icons/cart.svg" alt="Shopping Cart" width="24" height="24">
+                <span id="cart-count">0</span>
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <section id="sell-phone" class="product-section">
+            <h2 data-en="Sell Your Phone" data-es="Vende Tu Teléfono">Sell Your Phone</h2>
+            <div class="sell-form-container">
+                <div class="sell-form">
+                    <p data-en="Get the best value for your used phone. Fill out the form below and we'll provide you with an instant quote." data-es="Obtén el mejor valor por tu teléfono usado. Completa el formulario a continuación y te proporcionaremos una cotización instantánea.">Get the best value for your used phone. Fill out the form below and we'll provide you with an instant quote.</p>
+
+                    <form id="sell-phone-form">
+                        <div class="form-group">
+                            <label for="phone-brand" data-en="Phone Brand" data-es="Marca del Teléfono">Phone Brand</label>
+                            <select id="phone-brand" name="brand" required>
+                                <option value="" data-en="Select Brand" data-es="Seleccionar Marca">Select Brand</option>
+                                <option value="apple">Apple</option>
+                                <option value="samsung">Samsung</option>
+                                <option value="google">Google</option>
+                                <option value="oneplus">OnePlus</option>
+                                <option value="other" data-en="Other" data-es="Otro">Other</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="phone-model" data-en="Phone Model" data-es="Modelo del Teléfono">Phone Model</label>
+                            <input type="text" id="phone-model" name="model" data-en="e.g., iPhone 13, Galaxy S22" data-es="ej. iPhone 13, Galaxy S22" placeholder="e.g., iPhone 13, Galaxy S22" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="phone-condition" data-en="Phone Condition" data-es="Condición del Teléfono">Phone Condition</label>
+                            <select id="phone-condition" name="condition" required>
+                                <option value="" data-en="Select Condition" data-es="Seleccionar Condición">Select Condition</option>
+                                <option value="excellent" data-en="Excellent - Like New" data-es="Excelente - Como Nuevo">Excellent - Like New</option>
+                                <option value="good" data-en="Good - Minor Wear" data-es="Bueno - Desgaste Menor">Good - Minor Wear</option>
+                                <option value="fair" data-en="Fair - Visible Wear" data-es="Regular - Desgaste Visible">Fair - Visible Wear</option>
+                                <option value="poor" data-en="Poor - Heavy Wear" data-es="Malo - Desgaste Pesado">Poor - Heavy Wear</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="phone-storage" data-en="Storage Capacity" data-es="Capacidad de Almacenamiento">Storage Capacity</label>
+                            <select id="phone-storage" name="storage" required>
+                                <option value="" data-en="Select Storage" data-es="Seleccionar Almacenamiento">Select Storage</option>
+                                <option value="64gb">64GB</option>
+                                <option value="128gb">128GB</option>
+                                <option value="256gb">256GB</option>
+                                <option value="512gb">512GB</option>
+                                <option value="1tb">1TB</option>
+                                <option value="other" data-en="Other" data-es="Otro">Other</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="phone-accessories" data-en="Included Accessories" data-es="Accesorios Incluidos">Included Accessories</label>
+                            <div class="checkbox-group">
+                                <label class="checkbox-label">
+                                    <input type="checkbox" name="accessories" value="charger"> <span data-en="Original Charger" data-es="Cargador Original">Original Charger</span>
+                                </label>
+                                <label class="checkbox-label">
+                                    <input type="checkbox" name="accessories" value="box"> <span data-en="Original Box" data-es="Caja Original">Original Box</span>
+                                </label>
+                                <label class="checkbox-label">
+                                    <input type="checkbox" name="accessories" value="earbuds"> <span data-en="Earbuds/Headphones" data-es="Audífonos">Earbuds/Headphones</span>
+                                </label>
+                                <label class="checkbox-label">
+                                    <input type="checkbox" name="accessories" value="case"> <span data-en="Protective Case" data-es="Estuche Protector">Protective Case</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="contact-name" data-en="Your Name" data-es="Tu Nombre">Your Name</label>
+                            <input type="text" id="contact-name" name="name" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="contact-email" data-en="Email Address" data-es="Dirección de Correo">Email Address</label>
+                            <input type="email" id="contact-email" name="email" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="contact-phone" data-en="Phone Number" data-es="Número de Teléfono">Phone Number</label>
+                            <input type="tel" id="contact-phone" name="phone" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="phone-photos" data-en="Phone Photos" data-es="Fotos del Teléfono">Phone Photos</label>
+                            <div class="photo-upload-container">
+                                <input type="file" id="phone-photos" name="photos" accept="image/*" multiple style="display: none;">
+                                <div class="photo-upload-area" id="photo-upload-area">
+                                    <div class="upload-icon">📷</div>
+                                    <p data-en="Click to upload photos of your phone" data-es="Haz clic para subir fotos de tu teléfono">Click to upload photos of your phone</p>
+                                    <small data-en="Upload up to 5 photos (JPG, PNG, max 5MB each)" data-es="Sube hasta 5 fotos (JPG, PNG, máx. 5MB cada una)">Upload up to 5 photos (JPG, PNG, max 5MB each)</small>
+                                </div>
+                                <div class="photo-preview" id="photo-preview"></div>
+                            </div>
+                        </div>
+
+                        <div class="price-quote-section">
+                            <button type="button" id="get-quote-btn" class="quote-btn" data-en="Get Price Suggestion" data-es="Obtener Sugerencia de Precio">Get Price Suggestion</button>
+
+                            <div id="price-suggestion" class="price-suggestion" style="display: none;">
+                                <p data-en="Suggested Price:" data-es="Precio Sugerido:">Suggested Price: <span id="suggested-price">$0</span></p>
+                                <div class="form-group">
+                                    <label for="custom-price" data-en="Your Asking Price (optional)" data-es="Tu Precio Solicitado (opcional)">Your Asking Price (optional)</label>
+                                    <input type="number" id="custom-price" name="customPrice" min="0" step="0.01" data-en="Enter your desired price..." data-es="Ingresa tu precio deseado..." placeholder="Enter your desired price...">
+                                    <small data-en="Leave blank to use suggested price" data-es="Deja en blanco para usar precio sugerido">Leave blank to use suggested price</small>
+                                </div>
+                            </div>
+                        </div>
+
+                        <button type="submit" class="submit-btn" data-en="List Your Phone" data-es="Listar Tu Teléfono">List Your Phone</button>
+                    </form>
+                </div>
+
+                <div class="sell-info">
+                    <h3 data-en="Why Sell to Ph4You?" data-es="¿Por Qué Vender a Ph4You?">Why Sell to Ph4You?</h3>
+                    <ul>
+                        <li data-en="Best prices guaranteed" data-es="Mejores precios garantizados">Best prices guaranteed</li>
+                        <li data-en="Free shipping labels" data-es="Etiquetas de envío gratis">Free shipping labels</li>
+                        <li data-en="Fast payment within 24 hours" data-es="Pago rápido dentro de 24 horas">Fast payment within 24 hours</li>
+                        <li data-en="Secure and insured shipping" data-es="Envío seguro y asegurado">Secure and insured shipping</li>
+                        <li data-en="Expert phone evaluation" data-es="Evaluación experta de teléfonos">Expert phone evaluation</li>
+                    </ul>
+
+                    <div class="sell-tips">
+                        <h4 data-en="Tips for Maximum Value" data-es="Consejos para Máximo Valor">Tips for Maximum Value</h4>
+                        <ul>
+                            <li data-en="Clean your phone thoroughly" data-es="Limpia tu teléfono completamente">Clean your phone thoroughly</li>
+                            <li data-en="Remove personal data and reset to factory settings" data-es="Elimina datos personales y restablece a configuración de fábrica">Remove personal data and reset to factory settings</li>
+                            <li data-en="Include all original accessories" data-es="Incluye todos los accesorios originales">Include all original accessories</li>
+                            <li data-en="Provide accurate condition details" data-es="Proporciona detalles precisos de la condición">Provide accurate condition details</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="user-listings" class="product-section">
+            <h2 data-en="User Phone Listings" data-es="Anuncios de Teléfonos de Usuarios">User Phone Listings</h2>
+            <div id="user-phone-listings" class="user-listings-container">
+                <!-- Phone listings will be inserted here by JavaScript -->
+            </div>
+        </section>
+    </main>
+
+    <!-- Modal for product details -->
+    <div id="product-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div id="modal-body">
+                <!-- Product details will be inserted here -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Success modal -->
+    <div id="success-modal" class="modal">
+        <div class="modal-content success-modal">
+            <span class="close">&times;</span>
+            <div id="success-modal-body">
+                <!-- Success message will be inserted here -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Shopping cart modal -->
+    <div id="cart-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2 data-en="Your Cart" data-es="Tu Carrito">Your Cart</h2>
+            <div id="cart-items">
+                <!-- Cart items will be inserted here -->
+            </div>
+            <div id="cart-total" data-en="Total: $0" data-es="Total: $0">Total: $0</div>
+            <button id="checkout-btn" data-en="Checkout" data-es="Pagar">Checkout</button>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3 data-en="Ph4You" data-es="Ph4You">Ph4You</h3>
+                <p data-en="Your trusted source for quality cell phones and accessories. We offer both new and certified pre-owned devices with warranty." data-es="Tu fuente confiable de teléfonos celulares y accesorios de calidad. Ofrecemos dispositivos nuevos y certificados usados con garantía.">Your trusted source for quality cell phones and accessories. We offer both new and certified pre-owned devices with warranty.</p>
+            </div>
+            <div class="footer-section">
+                <h4 data-en="Customer Service" data-es="Servicio al Cliente">Customer Service</h4>
+                <ul>
+                    <li><a href="#" data-en="Contact Us" data-es="Contáctanos">Contact Us</a></li>
+                    <li><a href="#" data-en="Shipping Info" data-es="Información de Envío">Shipping Info</a></li>
+                    <li><a href="#" data-en="Returns & Exchanges" data-es="Devoluciones y Cambios">Returns & Exchanges</a></li>
+                    <li><a href="#" data-en="Warranty Information" data-es="Información de Garantía">Warranty Information</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4 data-en="Shop" data-es="Tienda">Shop</h4>
+                <ul>
+                    <li><a href="index.html#new-phones" data-en="New Phones" data-es="Teléfonos Nuevos">New Phones</a></li>
+                    <li><a href="index.html#used-phones" data-en="Used Phones" data-es="Teléfonos Usados">Used Phones</a></li>
+                    <li><a href="index.html#accessories" data-en="Accessories" data-es="Accesorios">Accessories</a></li>
+                    <li><a href="sell.html" data-en="Sell Your Phone" data-es="Vende Tu Teléfono">Sell Your Phone</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4 data-en="Contact Information" data-es="Información de Contacto">Contact Information</h4>
+                <p>📧 support@cellstore.com</p>
+                <p>📞 1-800-CELLSTORE</p>
+                <p>📍 123 Tech Street<br>Digital City, DC 12345</p>
+                <p>🕒 Mon-Fri: 9AM-6PM EST</p>
+            </div>
+            <div class="footer-section">
+                <h4>Follow Us</h4>
+                <div class="social-icons">
+                    <a href="https://twitter.com/cellstore" class="social-icon twitter" title="Follow us on Twitter" target="_blank">
+                        <img src="assets/icons/twitter.svg" alt="Twitter" width="24" height="24">
+                    </a>
+                    <a href="https://youtube.com/@cellstore" class="social-icon youtube" title="Subscribe on YouTube" target="_blank">
+                        <img src="assets/icons/youtube.svg" alt="YouTube" width="24" height="24">
+                    </a>
+                    <a href="https://instagram.com/cellstore" class="social-icon instagram" title="Follow us on Instagram" target="_blank">
+                        <img src="assets/icons/instagram.svg" alt="Instagram" width="24" height="24">
+                    </a>
+                    <a href="https://facebook.com/cellstore" class="social-icon facebook" title="Like us on Facebook" target="_blank">
+                        <img src="assets/icons/facebook.svg" alt="Facebook" width="24" height="24">
+                    </a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h4 data-en="Language" data-es="Idioma">Language</h4>
+                <select id="language-select">
+                    <option value="en">English</option>
+                    <option value="es">Español</option>
+                </select>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p data-en="&copy; 2027 Ph4You. All rights By OBi reserved. | Privacy Policy | Terms of Service" data-es="&copy; 2027 Ph4You. Todos los derechos reservados por OBi. | Política de Privacidad | Términos de Servicio">&copy; 2027 CellStore. All rights By OBi reserved. | <a href="#" data-en="Privacy Policy" data-es="Política de Privacidad">Privacy Policy</a> | <a href="#" data-en="Terms of Service" data-es="Términos de Servicio">Terms of Service</a></p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+
+    <!-- Scroll to top button -->
+    <button class="scroll-to-top" id="scroll-to-top" title="Back to Top">↑</button>
+
+    <script>
+        // Scroll to top button functionality
+        const scrollToTopBtn = document.getElementById('scroll-to-top');
+
+        // Show/hide button based on scroll position
+        window.addEventListener('scroll', function() {
+            if (window.pageYOffset > 300) {
+                scrollToTopBtn.classList.add('show');
+            } else {
+                scrollToTopBtn.classList.remove('show');
+            }
+        });
+
+        // Scroll to top when clicked
+        scrollToTopBtn.addEventListener('click', function() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+    </script>
+</body>
+</html>
